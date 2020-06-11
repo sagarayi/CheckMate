@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DC2491B4ED00C1444F /* Pawn.swift */; };
+		5D7AA5E02491DA9100C1444F /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DF2491DA9100C1444F /* King.swift */; };
+		5D9462B82491AB2600F202F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462B72491AB2600F202F3 /* Piece.swift */; };
+		5D9462BB2491AB8A00F202F3 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */; };
+		5D9462BD2491AC7300F202F3 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462BC2491AC7300F202F3 /* Position.swift */; };
 		5DAC039F2450E1DB00169B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC039E2450E1DB00169B42 /* AppDelegate.swift */; };
 		5DAC03A12450E1DB00169B42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC03A02450E1DB00169B42 /* SceneDelegate.swift */; };
 		5DAC03A32450E1DB00169B42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC03A22450E1DB00169B42 /* ViewController.swift */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D7AA5DC2491B4ED00C1444F /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
+		5D7AA5DF2491DA9100C1444F /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		5D9462B72491AB2600F202F3 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
+		5D9462BC2491AC7300F202F3 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		5DAC039B2450E1DB00169B42 /* CheckMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC039E2450E1DB00169B42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAC03A02450E1DB00169B42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D7AA5DE2491D9CD00C1444F /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				5D7AA5DC2491B4ED00C1444F /* Pawn.swift */,
+				5D7AA5DF2491DA9100C1444F /* King.swift */,
+			);
+			path = Pieces;
+			sourceTree = "<group>";
+		};
+		5D9462B62491AAF100F202F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9462B72491AB2600F202F3 /* Piece.swift */,
+				5D7AA5DE2491D9CD00C1444F /* Pieces */,
+				5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */,
+				5D9462BC2491AC7300F202F3 /* Position.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5DAC03922450E1DB00169B42 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +131,7 @@
 		5DAC039D2450E1DB00169B42 /* CheckMate */ = {
 			isa = PBXGroup;
 			children = (
+				5D9462B62491AAF100F202F3 /* Model */,
 				5DAC039E2450E1DB00169B42 /* AppDelegate.swift */,
 				5DAC03A02450E1DB00169B42 /* SceneDelegate.swift */,
 				5DAC03A22450E1DB00169B42 /* ViewController.swift */,
@@ -264,8 +295,13 @@
 			files = (
 				5DAC03A32450E1DB00169B42 /* ViewController.swift in Sources */,
 				5DAC039F2450E1DB00169B42 /* AppDelegate.swift in Sources */,
+				5D7AA5E02491DA9100C1444F /* King.swift in Sources */,
+				5D9462B82491AB2600F202F3 /* Piece.swift in Sources */,
+				5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */,
 				5DAC03A12450E1DB00169B42 /* SceneDelegate.swift in Sources */,
 				5DAC03A92450E1DB00169B42 /* CheckMate.xcdatamodeld in Sources */,
+				5D9462BB2491AB8A00F202F3 /* EnumHelper.swift in Sources */,
+				5D9462BD2491AC7300F202F3 /* Position.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
