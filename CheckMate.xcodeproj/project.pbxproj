@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B0FBAA24A3AD110034CB42 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBA924A3AD110034CB42 /* Board.swift */; };
+		04B0FBAD24A3BCC40034CB42 /* PawnTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */; };
 		5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DC2491B4ED00C1444F /* Pawn.swift */; };
 		5D7AA5E02491DA9100C1444F /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DF2491DA9100C1444F /* King.swift */; };
 		5D9462B82491AB2600F202F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462B72491AB2600F202F3 /* Piece.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04B0FBA924A3AD110034CB42 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawnTest.swift; sourceTree = "<group>"; };
 		5D7AA5DC2491B4ED00C1444F /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		5D7AA5DF2491DA9100C1444F /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
 		5D9462B72491AB2600F202F3 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				5D7AA5DE2491D9CD00C1444F /* Pieces */,
 				5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */,
 				5D9462BC2491AC7300F202F3 /* Position.swift */,
+				04B0FBA924A3AD110034CB42 /* Board.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				5DAC03B82450E1DD00169B42 /* CheckMateTests.swift */,
+				04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */,
 				5DAC03BA2450E1DD00169B42 /* Info.plist */,
 			);
 			path = CheckMateTests;
@@ -172,6 +178,7 @@
 				5DAC03972450E1DB00169B42 /* Sources */,
 				5DAC03982450E1DB00169B42 /* Frameworks */,
 				5DAC03992450E1DB00169B42 /* Resources */,
+				04B0FBAB24A3B4B90034CB42 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -315,6 +322,7 @@
 			files = (
 				5DAC03A32450E1DB00169B42 /* ViewController.swift in Sources */,
 				5DAC039F2450E1DB00169B42 /* AppDelegate.swift in Sources */,
+				04B0FBAA24A3AD110034CB42 /* Board.swift in Sources */,
 				5D7AA5E02491DA9100C1444F /* King.swift in Sources */,
 				5D9462B82491AB2600F202F3 /* Piece.swift in Sources */,
 				5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */,
@@ -330,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DAC03B92450E1DD00169B42 /* CheckMateTests.swift in Sources */,
+				04B0FBAD24A3BCC40034CB42 /* PawnTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
