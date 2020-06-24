@@ -9,11 +9,11 @@
 import Foundation
 
 class Position: NSObject {
-    var x:Int
-    var y:Int
-    
-    init(x:Int, y:Int){
-        self.x = x
-        self.y = y
+    var xPos: Int
+    var yPos: Int
+
+    init(xPos: Int, yPos: Int) {
+        self.xPos = xPos
+        self.yPos = yPos
     }
 }

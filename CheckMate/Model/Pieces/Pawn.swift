@@ -10,54 +10,62 @@ import UIKit
 
 class Pawn: Piece {
     private var canPromote = false
-    
-    func isEligibleForPromotion() -> Bool{
+
+     init(pieceColor: Color,
+          initialPosition: Position) {
+        super.init(pieceType: Type.PAWN, pieceColor: pieceColor, initialPosition: initialPosition)
+    }
+
+    func isEligibleForPromotion() -> Bool {
         return self.canPromote
     }
-    
-    func getLegalMoves() -> [Position]{
-        let pos = getInitialPosition();
-        var legalMoves:[Position] = []
-        if(pos.x == getCurrentPosition().x){
-            legalMoves.append(Position.init(x: pos.x + 2, y: pos.y))
+
+    override func getLegalMoves() -> [Position] {
+        var legalMoves: [Position] = []
+
+        let firstMove: Bool = getInitialPosition().xPos == getCurrentPosition().xPos
+
+        let xPos = getInitialPosition().xPos
+        let yPos = getInitialPosition().yPos
+
+        let xLimit = 7
+        let yLimit = 7
+
+        let increment = getColor() == Color.WHITE ? 1 : -1
+
+        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos, xLimit: xLimit, yLimit: yLimit) {
+            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos))
         }
-        if ( getColor() == Color.WHITE){
-            if (pos.x < 7) {
-                legalMoves.append(Position.init(x: pos.x + 1, y: pos.y))
+
+        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos-1, xLimit: xLimit, yLimit: yLimit) {
+            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos-1))
+        }
+
+        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos+1, xLimit: xLimit, yLimit: yLimit) {
+            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos+1))
+        }
+
+        if  getColor() == Color.WHITE {
+
+            if firstMove {
+                legalMoves.append(Position.init(xPos: xPos+2, yPos: yPos))
             }
-            if (pos.x == 7) {
+
+            if xPos == 7 {
                 canPromote = true
             }
-            if  (pos.y >= 1 && pos.y <= 6){
-                legalMoves.append(Position.init(x: pos.x + 1, y: pos.y-1));
-                legalMoves.append(Position.init(x: pos.x + 1, y: pos.y+1));
-            }
-            if (pos.y == 1){
-                legalMoves.append(Position.init(x: pos.x + 1, y: pos.y+1));
-            }
-            if (pos.y == 7){
-                legalMoves.append(Position.init(x: pos.x + 1, y: pos.y-1));
-            }
-            
+
         } else {
-            if (pos.x > 0) {
-                legalMoves.append(Position.init(x: pos.x - 1, y: pos.y))
+
+            if firstMove {
+                legalMoves.append(Position.init(xPos: xPos-2, yPos: yPos))
             }
-            if (pos.x == 0) {
+
+            if xPos == 0 {
                 canPromote = true
-            }
-            if  (pos.y >= 1 && pos.y <= 6){
-                legalMoves.append(Position.init(x: pos.x - 1, y: pos.y-1));
-                legalMoves.append(Position.init(x: pos.x - 1, y: pos.y+1));
-            }
-            if (pos.y == 1){
-                legalMoves.append(Position.init(x: pos.x - 1, y: pos.y+1));
-            }
-            if (pos.y == 7){
-                legalMoves.append(Position.init(x: pos.x - 1, y: pos.y-1));
             }
         }
         return legalMoves
     }
-    
+
 }
