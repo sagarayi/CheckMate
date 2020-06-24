@@ -33,16 +33,10 @@ class Pawn: Piece {
 
         let increment = getColor() == Color.WHITE ? 1 : -1
 
-        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos, xLimit: xLimit, yLimit: yLimit) {
-            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos))
-        }
-
-        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos-1, xLimit: xLimit, yLimit: yLimit) {
-            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos-1))
-        }
-
-        if !self.isOutOfBounds(xPos: xPos + increment, yPos: yPos+1, xLimit: xLimit, yLimit: yLimit) {
-            legalMoves.append(Position.init(xPos: xPos+increment, yPos: yPos+1))
+        for col in [yPos, yPos - 1, yPos + 1] {
+            if !self.isOutOfBounds(xPos: xPos + increment, yPos: col, xLimit: xLimit, yLimit: yLimit) {
+                legalMoves.append(Position.init(xPos: xPos + increment, yPos: col))
+            }
         }
 
         if  getColor() == Color.WHITE {

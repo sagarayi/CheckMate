@@ -19,7 +19,6 @@ class PawnTest: XCTestCase {
                                     initialPosition: Position.init(xPos: 6, yPos: 4))
         self.whitePawn = Pawn.init( pieceColor: Color.WHITE,
                                     initialPosition: Position.init(xPos: 1, yPos: 4))
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
