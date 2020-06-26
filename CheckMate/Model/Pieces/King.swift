@@ -14,14 +14,11 @@ class King: Piece {
         super.init(pieceType: Type.KING, pieceColor: pieceColor, initialPosition: initialPosition)
     }
 
-    override func getLegalMoves() -> [Position] {
+    override func getLegalMoves() -> Set<Position> {
         let xPos = self.getInitialPosition().xPos
         let yPos = self.getInitialPosition().yPos
 
-        var positions: [Position] = []
-
-        let xLimit = 7
-        let yLimit = 7
+        var legalMoves: Set<Position> = Set()
 
         for row in [xPos, xPos + 1, xPos - 1] {
             for col in [yPos, yPos - 1, yPos + 1] {
@@ -29,12 +26,12 @@ class King: Piece {
                     continue
                 }
 
-                if !self.isOutOfBounds(xPos: row, yPos: col, xLimit: xLimit, yLimit: yLimit) {
-                    positions.append(Position.init(xPos: row, yPos: col))
+                if !self.isOutOfBounds(xPos: row, yPos: col, limit: limit) {
+                    legalMoves.insert(Position.init(xPos: row, yPos: col))
                 }
             }
         }
 
-        return positions
+        return legalMoves
     }
 }

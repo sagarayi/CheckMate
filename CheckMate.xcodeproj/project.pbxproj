@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0442CBE224A660C600D284BF /* Rook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442CBE124A660C600D284BF /* Rook.swift */; };
+		0442CBE424A6676400D284BF /* RookTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442CBE324A6676400D284BF /* RookTest.swift */; };
 		04B0FBAA24A3AD110034CB42 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBA924A3AD110034CB42 /* Board.swift */; };
 		04B0FBAD24A3BCC40034CB42 /* PawnTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */; };
 		04B0FBAF24A3D0770034CB42 /* KingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBAE24A3D0770034CB42 /* KingTest.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0442CBE124A660C600D284BF /* Rook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rook.swift; sourceTree = "<group>"; };
+		0442CBE324A6676400D284BF /* RookTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RookTest.swift; sourceTree = "<group>"; };
 		04B0FBA924A3AD110034CB42 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawnTest.swift; sourceTree = "<group>"; };
 		04B0FBAE24A3D0770034CB42 /* KingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingTest.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				5D7AA5DC2491B4ED00C1444F /* Pawn.swift */,
 				5D7AA5DF2491DA9100C1444F /* King.swift */,
+				0442CBE124A660C600D284BF /* Rook.swift */,
 			);
 			path = Pieces;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				5DAC03B82450E1DD00169B42 /* CheckMateTests.swift */,
 				04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */,
 				04B0FBAE24A3D0770034CB42 /* KingTest.swift */,
+				0442CBE324A6676400D284BF /* RookTest.swift */,
 				5DAC03BA2450E1DD00169B42 /* Info.plist */,
 			);
 			path = CheckMateTests;
@@ -331,6 +337,7 @@
 				5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */,
 				5DAC03A12450E1DB00169B42 /* SceneDelegate.swift in Sources */,
 				5DAC03A92450E1DB00169B42 /* CheckMate.xcdatamodeld in Sources */,
+				0442CBE224A660C600D284BF /* Rook.swift in Sources */,
 				5D9462BB2491AB8A00F202F3 /* EnumHelper.swift in Sources */,
 				5D9462BD2491AC7300F202F3 /* Position.swift in Sources */,
 			);
@@ -340,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0442CBE424A6676400D284BF /* RookTest.swift in Sources */,
 				5DAC03B92450E1DD00169B42 /* CheckMateTests.swift in Sources */,
 				04B0FBAD24A3BCC40034CB42 /* PawnTest.swift in Sources */,
 				04B0FBAF24A3D0770034CB42 /* KingTest.swift in Sources */,

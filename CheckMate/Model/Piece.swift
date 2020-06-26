@@ -9,6 +9,7 @@
 import UIKit
 
 class Piece: NSObject {
+    let limit = 7
     private var pieceType: Type
     private var pieceColor: Color
     private var initialPosition: Position
@@ -39,11 +40,11 @@ class Piece: NSObject {
         return self.currentPosition
     }
 
-    func getLegalMoves() -> [Position] {
+    func getLegalMoves() -> Set<Position> {
         return [Position.init(xPos: -1, yPos: -1)]
     }
 
-    func isOutOfBounds(xPos: Int, yPos: Int, xLimit: Int, yLimit: Int) -> Bool {
-        return (xPos < 0 || yPos < 0 || xPos > xLimit || yPos > yLimit)
+    func isOutOfBounds(xPos: Int, yPos: Int, limit: Int) -> Bool {
+        return (xPos < 0 || yPos < 0 || xPos > limit || yPos > limit)
     }
 }

@@ -20,29 +20,26 @@ class Pawn: Piece {
         return self.canPromote
     }
 
-    override func getLegalMoves() -> [Position] {
-        var legalMoves: [Position] = []
+    override func getLegalMoves() -> Set<Position> {
+        var legalMoves: Set<Position> = Set()
 
         let firstMove: Bool = getInitialPosition().xPos == getCurrentPosition().xPos
 
         let xPos = getInitialPosition().xPos
         let yPos = getInitialPosition().yPos
 
-        let xLimit = 7
-        let yLimit = 7
-
         let increment = getColor() == Color.WHITE ? 1 : -1
 
         for col in [yPos, yPos - 1, yPos + 1] {
-            if !self.isOutOfBounds(xPos: xPos + increment, yPos: col, xLimit: xLimit, yLimit: yLimit) {
-                legalMoves.append(Position.init(xPos: xPos + increment, yPos: col))
+            if !self.isOutOfBounds(xPos: xPos + increment, yPos: col, limit: self.limit) {
+                legalMoves.insert(Position.init(xPos: xPos + increment, yPos: col))
             }
         }
 
         if  getColor() == Color.WHITE {
 
             if firstMove {
-                legalMoves.append(Position.init(xPos: xPos+2, yPos: yPos))
+                legalMoves.insert(Position.init(xPos: xPos+2, yPos: yPos))
             }
 
             if xPos == 7 {
@@ -52,7 +49,7 @@ class Pawn: Piece {
         } else {
 
             if firstMove {
-                legalMoves.append(Position.init(xPos: xPos-2, yPos: yPos))
+                legalMoves.insert(Position.init(xPos: xPos-2, yPos: yPos))
             }
 
             if xPos == 0 {
