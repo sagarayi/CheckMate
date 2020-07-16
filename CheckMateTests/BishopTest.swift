@@ -10,10 +10,10 @@ import XCTest
 @testable import CheckMate
 
 class BishopTest: XCTestCase {
-    var blackBishop1:Bishop?
-    var whiteBishop1:Bishop?
-    var blackBishop2:Bishop?
-    var whiteBishop2:Bishop?
+    var blackBishop1: Bishop!
+    var whiteBishop1: Bishop!
+    var blackBishop2: Bishop!
+    var whiteBishop2: Bishop!
 
     override func setUp() {
         blackBishop1 = Bishop.init(pieceColor: Color.BLACK, initialPosition: Position.init(xPos: 7, yPos: 2))
@@ -25,10 +25,11 @@ class BishopTest: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testLegalMoves() {
+        XCTAssertEqual(15, blackBishop1.getLegalMoves().count)
         let moves = blackBishop1?.getLegalMoves()
-        for move in moves!{
+        for move in moves! {
             print("\(move.xPos) \(move.yPos)")
         }
     }
