@@ -14,6 +14,8 @@
 		04B0FBAF24A3D0770034CB42 /* KingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0FBAE24A3D0770034CB42 /* KingTest.swift */; };
 		5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DC2491B4ED00C1444F /* Pawn.swift */; };
 		5D7AA5E02491DA9100C1444F /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5DF2491DA9100C1444F /* King.swift */; };
+		5D7AA5E224B68A1400C1444F /* Bishop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5E124B68A1400C1444F /* Bishop.swift */; };
+		5D7AA5E424B68FEE00C1444F /* BishopTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AA5E324B68FEE00C1444F /* BishopTest.swift */; };
 		5D9462B82491AB2600F202F3 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462B72491AB2600F202F3 /* Piece.swift */; };
 		5D9462BB2491AB8A00F202F3 /* EnumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */; };
 		5D9462BD2491AC7300F202F3 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9462BC2491AC7300F202F3 /* Position.swift */; };
@@ -53,6 +55,8 @@
 		04B0FBAE24A3D0770034CB42 /* KingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingTest.swift; sourceTree = "<group>"; };
 		5D7AA5DC2491B4ED00C1444F /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		5D7AA5DF2491DA9100C1444F /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		5D7AA5E124B68A1400C1444F /* Bishop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bishop.swift; sourceTree = "<group>"; };
+		5D7AA5E324B68FEE00C1444F /* BishopTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BishopTest.swift; sourceTree = "<group>"; };
 		5D9462B72491AB2600F202F3 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		5D9462BA2491AB8A00F202F3 /* EnumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumHelper.swift; sourceTree = "<group>"; };
 		5D9462BC2491AC7300F202F3 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				5D7AA5DC2491B4ED00C1444F /* Pawn.swift */,
 				5D7AA5DF2491DA9100C1444F /* King.swift */,
 				0442CBE124A660C600D284BF /* Rook.swift */,
+				5D7AA5E124B68A1400C1444F /* Bishop.swift */,
 			);
 			path = Pieces;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				04B0FBAC24A3BCC40034CB42 /* PawnTest.swift */,
 				04B0FBAE24A3D0770034CB42 /* KingTest.swift */,
 				0442CBE324A6676400D284BF /* RookTest.swift */,
+				5D7AA5E324B68FEE00C1444F /* BishopTest.swift */,
 				5DAC03BA2450E1DD00169B42 /* Info.plist */,
 			);
 			path = CheckMateTests;
@@ -337,6 +343,7 @@
 				5D7AA5DD2491B4ED00C1444F /* Pawn.swift in Sources */,
 				5DAC03A12450E1DB00169B42 /* SceneDelegate.swift in Sources */,
 				5DAC03A92450E1DB00169B42 /* CheckMate.xcdatamodeld in Sources */,
+				5D7AA5E224B68A1400C1444F /* Bishop.swift in Sources */,
 				0442CBE224A660C600D284BF /* Rook.swift in Sources */,
 				5D9462BB2491AB8A00F202F3 /* EnumHelper.swift in Sources */,
 				5D9462BD2491AC7300F202F3 /* Position.swift in Sources */,
@@ -349,6 +356,7 @@
 			files = (
 				0442CBE424A6676400D284BF /* RookTest.swift in Sources */,
 				5DAC03B92450E1DD00169B42 /* CheckMateTests.swift in Sources */,
+				5D7AA5E424B68FEE00C1444F /* BishopTest.swift in Sources */,
 				04B0FBAD24A3BCC40034CB42 /* PawnTest.swift in Sources */,
 				04B0FBAF24A3D0770034CB42 /* KingTest.swift in Sources */,
 			);

@@ -24,7 +24,7 @@ class Rook: Piece {
         // UP
         var rangeVar: [Int] = Array(currX...limit)
         for row in rangeVar {
-            if !self.isOutOfBounds(xPos: row, yPos: currY, limit: self.limit) {
+            if !self.isOutOfBounds(xPos: row, yPos: currY) {
                 legalMoves.insert(Position.init(xPos: row, yPos: currY))
             }
         }
@@ -32,7 +32,7 @@ class Rook: Piece {
         // DOWN
         rangeVar = Array(0...currX)
         for row in rangeVar {
-            if !self.isOutOfBounds(xPos: row, yPos: currY, limit: self.limit) {
+            if !self.isOutOfBounds(xPos: row, yPos: currY) {
                 legalMoves.insert(Position.init(xPos: row, yPos: currY))
             }
         }
@@ -40,7 +40,7 @@ class Rook: Piece {
         // LEFT
         rangeVar = Array(currY...limit)
         for col in rangeVar {
-            if !self.isOutOfBounds(xPos: currX, yPos: col, limit: self.limit) {
+            if !self.isOutOfBounds(xPos: currX, yPos: col) {
                 legalMoves.insert(Position.init(xPos: currX, yPos: col))
             }
         }
@@ -48,7 +48,7 @@ class Rook: Piece {
         // RIGHT
         rangeVar = Array(0...currY)
         for col in rangeVar {
-            if !self.isOutOfBounds(xPos: currX, yPos: col, limit: self.limit) {
+            if !self.isOutOfBounds(xPos: currX, yPos: col) {
                 legalMoves.insert(Position.init(xPos: currX, yPos: col))
             }
         }

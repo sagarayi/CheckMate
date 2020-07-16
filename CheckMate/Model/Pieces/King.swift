@@ -26,7 +26,7 @@ class King: Piece {
                     continue
                 }
 
-                if !self.isOutOfBounds(xPos: row, yPos: col, limit: limit) {
+                if !self.isOutOfBounds(xPos: row, yPos: col) {
                     legalMoves.insert(Position.init(xPos: row, yPos: col))
                 }
             }

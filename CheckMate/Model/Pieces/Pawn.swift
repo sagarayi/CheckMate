@@ -31,7 +31,7 @@ class Pawn: Piece {
         let increment = getColor() == Color.WHITE ? 1 : -1
 
         for col in [yPos, yPos - 1, yPos + 1] {
-            if !self.isOutOfBounds(xPos: xPos + increment, yPos: col, limit: self.limit) {
+            if !self.isOutOfBounds(xPos: xPos + increment, yPos: col) {
                 legalMoves.insert(Position.init(xPos: xPos + increment, yPos: col))
             }
         }

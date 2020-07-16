@@ -44,7 +44,7 @@ class Piece: NSObject {
         return [Position.init(xPos: -1, yPos: -1)]
     }
 
-    func isOutOfBounds(xPos: Int, yPos: Int, limit: Int) -> Bool {
+    func isOutOfBounds(xPos: Int, yPos: Int) -> Bool {
         return (xPos < 0 || yPos < 0 || xPos > limit || yPos > limit)
     }
 }
